@@ -19,8 +19,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="notes_main" target="1.5" />
-      <module name="notes_test" target="1.5" />
+      <module name="notes_main" target="1.8" />
+      <module name="notes_test" target="1.8" />
+      <module name="restful_mod_main" target="1.8" />
+      <module name="restful_mod_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
