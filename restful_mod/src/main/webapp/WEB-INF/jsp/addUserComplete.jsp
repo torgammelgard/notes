@@ -1,9 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Welcome</title>
+    <title>Title</title>
 </head>
 <body>
-Hello from welcome.jsp - Message - ${message}
+
+<h1>${message}</h1>
+
+<a href="/api">Back to list users</a>
+
 </body>
 </html>
