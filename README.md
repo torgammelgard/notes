@@ -1,7 +1,10 @@
+# Under construction, but can be built and run
+...
+
 # Notes
 A Spring+Hibernate project
 
-# Instructions how to build project
+# Instructions on how to build project
 ## Windows
 1. Download or clone https://github.com/torgammelgard/Notes.git
 2. In Notes folder, run command : gradlew build
