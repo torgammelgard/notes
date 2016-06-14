@@ -1,0 +1,32 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sec="http://www.springframework.org/schema/security"
+       xsi:schemaLocation=
+           "http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-4.2.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+  <sec:authentication-manager>
+    <sec:authentication-provider>
+      <sec:user-service>
+        <sec:user name="Tor" password="password" authorities="admin"/>
+        <sec:user name="Foo" password="password" authorities="admin"/>
+      </sec:user-service>
+
+    </sec:authentication-provider>
+
+    <sec:authentication-provider>
+      <sec:jdbc-user-service data-source-ref="dataSource"/>
+    </sec:authentication-provider>
+  </sec:authentication-manager>
+
+  <sec:http use-expressions="true">
+    <sec:intercept-url pattern="/api/createUser" access="permitAll" method="GET"/>
+    <sec:intercept-url pattern="/api/createUser" access="permitAll" method="POST"/>
+    <sec:intercept-url pattern="/api/createnote" access="isAuthenticated()"/>
+    <sec:intercept-url pattern="/" access="permitAll"/>
+    <sec:intercept-url pattern="/login" access="permitAll" method="GET"/>
+    <sec:intercept-url pattern="/login" access="permitAll" method="POST"/>
+    <sec:intercept-url pattern="/api/**" access="permitAll"/>
+    <sec:intercept-url pattern="/**" access="denyAll"/>
+    <sec:form-login login-page="/login" authentication-failure-url="/login?error"
+          default-target-url="/"/>
+  </sec:http>
+</beans>

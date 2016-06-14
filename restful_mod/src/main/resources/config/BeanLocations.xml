@@ -9,6 +9,9 @@
   <!-- Database Configuration -->
   <import resource="../database/datasource.xml"/>
 
+  <!-- Securiy Configuration -->
+  <import resource="../security/security-context.xml"/>
+  
   <!-- Auto scan the components -->
   <context:component-scan
       base-package="dao"/>

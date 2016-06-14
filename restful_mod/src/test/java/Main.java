@@ -16,7 +16,7 @@ public class Main {
 
     //private static SessionFactory factory;
 
-    public static void main(String[] arsg) {
+    public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("config/BeanLocations.xml");
 
         UsersDao usersDao = ((UsersDao) context.getBean("usersDao")); // bean string is case sensitive
@@ -45,25 +45,24 @@ public class Main {
         Note note = new Note();
         note.setTitle("Title");
         note.setContent("Content here");
-        note.setDate(new java.util.Date());
         note.setUser(user);
         notesDao.createNote(note);
 
         Note note2 = new Note();
         note2.setTitle("Title 2");
         note2.setContent("Content TWO");
-        note2.setDate(new java.util.Date());
         note2.setUser(user);
         notesDao.createNote(note2);
 
         // read
-        List<Note> notes = notesDao.getAllNotes();
 
-        for (Note n : notes) {
-            System.out.println(note.getTitle() + ", " + note.getContent());
+        for (Note note_temp : user.getNotes()) {
+            System.out.println(note_temp.getContent());
         }
 
+
         // update
+
 
 
         // delete

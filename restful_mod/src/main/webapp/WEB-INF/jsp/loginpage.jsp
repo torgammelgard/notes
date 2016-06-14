@@ -2,30 +2,32 @@
 
 <!-- Spring mvc form handling -->
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-
+<!--<%@ taglib prefix="th" uri="http://www.springframework.org/tags/form" %>-->
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Login Page</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            // TODO show error message div with message if login error exists.
-        });
-    </script>
+    <title>Login</title>
 </head>
 <body>
+<c:if test="${param.error != null}">
+    <c:out value="ERROR RIGHT HERE, RIGHT NOW"></c:out>
+</c:if>
 
+<div>
+    <form action="/login" method="post">
+        <fieldset>
+            <legend>Please Login</legend>
 
-<h1>Login</h1>
-<div id="error"></div>
-
-<form:form action="/login" method="post" commandName="userForm">
-    <form:input path="name" type="text" placeholder="Username"/>
-    <form:input path="password" type="password" placeholder="Password"/>
-    <input type="submit" value="Submit">
-</form:form>
-
-<a href="/createUser">Create new user</a>
-
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username"/>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"/>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+            <div class="form-actions">
+                <button type="submit" class="btn">Log in</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
 </body>
 </html>

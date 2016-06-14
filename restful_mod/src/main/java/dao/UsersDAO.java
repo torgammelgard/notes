@@ -34,6 +34,17 @@ public class UsersDao {
         return list.size() > 0;
     }
 
+    public User getUser(String username) {
+        Query query = session().createQuery("from User where name = :username");
+        query.setParameter("username", username);
+        List<User> users = query.list();
+
+        if (users.size() > 0) {
+            return users.get(0);
+        }
+        return null;
+    }
+
     public void create(User user) {
         session().save(user);
     }
