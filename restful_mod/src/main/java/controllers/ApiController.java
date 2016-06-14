@@ -8,11 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 @Controller
 @RequestMapping("/api")
@@ -25,13 +25,8 @@ public class ApiController {
     private NotesDao notesDao;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String get(Model model) {
-
-        List<User> users = usersDao.getAllUsers();
-        model.addAttribute("users", users);
-        model.addAttribute("message", "Message from /api");
-
-        return "index";
+    public String get() {
+        return "apiroot";
     }
 
     @RequestMapping(path = "/createnote", method = RequestMethod.GET)
@@ -53,4 +48,20 @@ public class ApiController {
         return "noteCreatedCompleted";
     }
 
+    @RequestMapping(path = "/deletenote", method = RequestMethod.POST)
+    public String prepareToDeleteNote(HttpServletRequest request){
+        String id = request.getParameter("id");
+        System.out.println(id);
+        return "forward:/api/deletenote/" + id;
+    }
+
+    @RequestMapping(path = "/deletenote/{id}", method = RequestMethod.POST)
+    public String deleteNote(@PathVariable(value = "id") int id) {
+        System.out.println("deleting note" + id);
+        if (notesDao.deleteNote(id)) {
+            System.out.println("Deleted note with id " + id);
+        } else
+            System.out.println("Couldn't note with id " + id);
+        return "redirect:/root";
+    }
 }

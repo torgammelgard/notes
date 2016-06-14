@@ -7,7 +7,7 @@
 
 <h1>Note was created</h1>
 
-<a href="/login">Back to page1</a>
+<a href="/">Back to root</a>
 
 </body>
 </html>

@@ -6,11 +6,15 @@
     <title>Main</title>
 </head>
 <body>
-<p>Message : ${message}</p>
+
+
+<h1>Welcome to Notes' API</h1>
+
+<p>Try to go to, </p>
 <ul>
-    <c:forEach var="user" items="${users}">
-        <li><c:out value="${user.name}"/></li>
-    </c:forEach>
+    <li><a href="/api/createnote">/api/createnote (there is also a direct post method to this)</a></li>
 </ul>
+
+
 </body>
 </html>

@@ -21,6 +21,11 @@
     <sec:intercept-url pattern="/api/createUser" access="permitAll" method="GET"/>
     <sec:intercept-url pattern="/api/createUser" access="permitAll" method="POST"/>
     <sec:intercept-url pattern="/api/createnote" access="isAuthenticated()"/>
+    <sec:intercept-url pattern="/api/deletenote" access="isAuthenticated()"/>
+    <sec:intercept-url pattern="/api/deletenote/*" access="isAuthenticated()"/>
+    <sec:intercept-url pattern="/root" access="isAuthenticated()"/>
+    <sec:intercept-url pattern="/logout" access="permitAll"/>
+    <sec:intercept-url pattern="/loggedout" access="permitAll"/>
     <sec:intercept-url pattern="/" access="permitAll"/>
     <sec:intercept-url pattern="/login" access="permitAll" method="GET"/>
     <sec:intercept-url pattern="/login" access="permitAll" method="POST"/>
@@ -28,5 +33,6 @@
     <sec:intercept-url pattern="/**" access="denyAll"/>
     <sec:form-login login-page="/login" authentication-failure-url="/login?error"
           default-target-url="/"/>
+    <sec:logout logout-success-url="/loggedout" />
   </sec:http>
 </beans>
