@@ -1,6 +1,5 @@
 package dao;
 
-import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +9,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Repository("usersDao")
+@Repository("notesDao")
 @EnableTransactionManagement
 @Transactional
-public class UsersDao {
+public class NotesDao {
 
     @Autowired
     private SessionFactory sessionFactory;
@@ -22,20 +21,12 @@ public class UsersDao {
         return sessionFactory.getCurrentSession();
     }
 
-    @SuppressWarnings("unchecked")
-    public List<User> getAllUsers() {
-        return session().createQuery("from User").list();
+    public void createNote(Note note) {
+        session().save(note);
     }
 
-    public boolean isUser(String username) {
-        Query query = session().createQuery("from User where name = :username");
-        query.setParameter("username", username);
-        List<User> list = query.list();
-        return list.size() > 0;
-    }
-
-    public void create(User user) {
-        session().save(user);
+    public List<Note> getAllNotes() {
+        return session().createQuery("from Note").list();
     }
 
 }

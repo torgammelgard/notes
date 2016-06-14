@@ -15,7 +15,6 @@
       <configuration>
         <datasource-map>
           <unit-entry name="hibernate.cfg.xml" value="3f5a2571-6da6-40e9-a1e6-69f1329fd616" />
-          <unit-entry name="sessionFactory" value="3f5a2571-6da6-40e9-a1e6-69f1329fd616" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/../../../restful_mod/src/main/resources/hibernate.cfg.xml" />
