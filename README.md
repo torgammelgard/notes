@@ -1,10 +1,12 @@
-# Under construction, but can be built and run
-...
 
 # Notes
 A Spring+Hibernate project
 
 # Instructions on how to build project
+Make sure there MySQL is installed and a database called 'test' exists and can be accessed.
+(There is a string property under /resources/properties/database.properties,  jdbc.url=jdbc:mysql://localhost:3306/test?useSSL=false .
+Changed the port and name of the database 'test' if needed.
+
 ## Windows
 1. Download or clone https://github.com/torgammelgard/Notes.git
 2. In Notes folder, run command : gradlew build
@@ -22,4 +24,4 @@ The Notes webapp aims to
 - offer a RESTful api
 
 # Technologies used
-It uses Spring MVC, Hibernate, Spring ORM, JSPs, Servlets, JSTL...
+It uses Spring MVC, Hibernate, MySQL, Spring ORM, JSPs, Servlets, JSTL...
