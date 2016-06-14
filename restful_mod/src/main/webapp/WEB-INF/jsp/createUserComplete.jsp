@@ -7,7 +7,7 @@
 
 <h1>${message}</h1>
 
-<a href="/api">Back to list users</a>
+<a href="/">Login page</a>
 
 </body>
 </html>

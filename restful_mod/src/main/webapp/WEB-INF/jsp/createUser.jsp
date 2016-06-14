@@ -5,16 +5,19 @@
 
 <html>
 <head>
-    <title>Main page</title>
+    <title>Create new user</title>
 </head>
 <body>
 
-<h1>This is the main page</h1>
+<h1>Create new user</h1>
 
-<form:form action="addUser" method="post" commandName="userForm">
+<form:form action="createUser" method="post" commandName="userForm">
     Username : <form:input path="name" />
+    Password : <form:input path="password" />
     <input type="submit" value="submit">
 </form:form>
+
+
 
 </body>
 </html>

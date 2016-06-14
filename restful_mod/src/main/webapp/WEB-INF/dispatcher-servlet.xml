@@ -12,7 +12,7 @@
           http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
 
-  <!-- This will find the MainConfiguration class -->
+  <!-- This will isUser the MainConfiguration class -->
   <context:component-scan base-package="config"/>
   <mvc:annotation-driven/>
 
