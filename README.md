@@ -7,6 +7,9 @@ Make sure there MySQL is installed and a database called 'test' exists and can b
 (There is a string property under /resources/properties/database.properties,  jdbc.url=jdbc:mysql://localhost:3306/test?useSSL=false .
 Changed the port and name of the database 'test' if needed.
 
+Login name and password for now : Tor - password
+
+
 ## Windows
 1. Download or clone https://github.com/torgammelgard/Notes.git
 2. In Notes folder, run command : gradlew build
