@@ -14,12 +14,12 @@ Login name and password for now :
 ## Windows
 1. Download or clone https://github.com/torgammelgard/notes.git
 2. Import the project in your favorite IDE, OR - build the project from the command line using gradle - In Notes folder, run command : gradlew build
-3. After building the project you will find a war-file (/build/libs/notes.war). Depoy this to your application server. I used Tomcat 7
+3. After building the project you will find a war-file (/build/libs/notes.war). Deploy this to your application server. I used Tomcat 7
 
 ## Mac
 1. Download or clone https://github.com/torgammelgard/notes.git
 2. Import the project in your favorite IDE, OR - build the project from the command line using gradle - In Notes folder, run command : ./gradlew build
-3. After building the project you will find a war-file (/build/libs/notes.war). Depoy this to your application server. I used Tomcat 7
+3. After building the project you will find a war-file (/build/libs/notes.war). Deploy this to your application server. I used Tomcat 7
 
 # Description
 The Notes webapp aims to 
