@@ -31,8 +31,8 @@ The Notes webapp aims to
 It uses Spring MVC, Hibernate, MySQL, Spring ORM, JSPs, Servlets, JSTL and Gradle...
 
 # Resources
-[Tutorialspoint](http://www.tutorialspoint.com/spring/)
-[Java EE 6 Tutorial](http://docs.oracle.com/javaee/6/tutorial/doc/gexaf.html)
-[Udemy - Spring and Hibernate Tutorial](https://www.udemy.com/spring-hibernate-tutorial/learn/v4/overview)
-[Udemy - JSP and Servlets](https://www.udemy.com/jsp-tutorial/learn/v4/overview)
-[Udemy - The Java Spring Turorial](https://www.udemy.com/javaspring/learn/v4/overview)
+- [Tutorialspoint](http://www.tutorialspoint.com/spring/)
+- [Java EE 6 Tutorial](http://docs.oracle.com/javaee/6/tutorial/doc/gexaf.html)
+- [Udemy - Spring and Hibernate Tutorial](https://www.udemy.com/spring-hibernate-tutorial/learn/v4/overview)
+- [Udemy - JSP and Servlets](https://www.udemy.com/jsp-tutorial/learn/v4/overview)
+- [Udemy - The Java Spring Turorial](https://www.udemy.com/javaspring/learn/v4/overview)
