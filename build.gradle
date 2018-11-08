@@ -15,7 +15,10 @@ allprojects {
     version '1.0-SNAPSHOT'
     apply plugin: 'java'
 }
-
+buildScan {
+  licenseAgreementUrl = "https://gradle.com/terms-of-service"
+  licenseAgree = "yes"
+}
 dependencies {
 
 
