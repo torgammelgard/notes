@@ -1,4 +1,7 @@
 
+![release version](https://img.shields.io/badge/release-v1.1-blue.svg)
+![notes branch master](https://travis-ci.org/torgammelgard/notes.svg?branch=master)
+
 # Notes
 A Spring+Hibernate project
 
