@@ -9,7 +9,7 @@
   <!-- Database Configuration -->
   <import resource="../database/datasource.xml"/>
 
-  <!-- Securiy Configuration -->
+  <!-- Security Configuration -->
   <import resource="../security/security-context.xml"/>
   
   <!-- Auto scan the components -->

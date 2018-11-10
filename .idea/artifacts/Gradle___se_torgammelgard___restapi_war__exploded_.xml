@@ -15,6 +15,7 @@
           <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:4.2.6.RELEASE" />
           <element id="library" level="project" name="Gradle: javax.servlet:jstl:1.2" />
           <element id="library" level="project" name="Gradle: javax.servlet.jsp:jsp-api:2.2" />
+          <element id="library" level="project" name="Gradle: javax.servlet:javax.servlet-api:3.1.0" />
           <element id="library" level="project" name="Gradle: org.hibernate:hibernate-entitymanager:4.2.6.Final" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-orm:4.3.0.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.security:spring-security-core:4.1.0.RELEASE" />
@@ -39,7 +40,6 @@
           <element id="library" level="project" name="Gradle: org.springframework:spring-core:4.3.0.RELEASE" />
           <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.2" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-aop:4.2.6.RELEASE" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/3cd63d075497751784b2fa84be59432f4905bf7c/javax.servlet-api-3.1.0.jar" />
         </element>
       </element>
       <element id="directory" name="META-INF">

@@ -18,6 +18,7 @@
   </sec:authentication-manager>
 
   <sec:http use-expressions="true">
+    <sec:intercept-url pattern="/favicon.ico" access="permitAll"/>
     <sec:intercept-url pattern="/api/createUser" access="permitAll" method="GET"/>
     <sec:intercept-url pattern="/api/createUser" access="permitAll" method="POST"/>
     <sec:intercept-url pattern="/api/createnote" access="isAuthenticated()"/>
