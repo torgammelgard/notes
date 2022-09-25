@@ -1,6 +1,6 @@
 tasks:
   - name: Terminal init
-    echo: 'Starting build'
+    before: echo 'Starting build'
     init: ./gradlew build
 
 # List the ports to expose
