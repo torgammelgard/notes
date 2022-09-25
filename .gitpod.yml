@@ -2,7 +2,8 @@ tasks:
   - name: Terminal init
     before: echo 'Starting build'
     init: ./gradlew build
-
+image:
+  file: .gitpod.Dockerfile
 # List the ports to expose
 ports:
   - port: 3306
