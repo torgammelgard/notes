@@ -1,0 +1,13 @@
+tasks:
+  - name: Terminal init
+    echo: 'Starting build'
+    init: ./gradlew build
+
+# List the ports to expose
+ports:
+  - port: 3306
+    onOpen: ignore
+    description: MySQL DB
+  - port: 8080
+    onOpen: open-preview
+    description: App 'Notes'
